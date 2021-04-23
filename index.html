@@ -1,19 +1,20 @@
-<!DOCTYPE html>
 <html>
     <head>
-        <title>My First Webpage</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
-
     <body>
-        <h1>03/28/2021</h1>
+        
+        <div id="app">
+            {{ message }}
+        </div>
 
-        <p>
-            This is a paragraph:
-            <br>     
-            <b>This is bold</b>
-        </p>
-
-        <img src="img/34-347923_dio-holy-diver.jpg" height="1000" width="1000" alt="Image of the day">
-        <hr width="2500">
+        <div id="app-2">
+            <span v-bind:title="message">
+                Hover over this message for a few seconds to see a dynamically bound title!
+            </span>
+        </div>
+        
+        <script src="index.js"></script>
     </body>
 </html>
